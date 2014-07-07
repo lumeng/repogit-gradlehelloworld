@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+//sourceCompatibility = '1.8'
+sourceCompatibility = '1.6'
+
+mainClassName = 'net.meng6.gradlehelloworld.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.guava:guava:17.0'
+
+    testCompile 'junit:junit:4.11' // A dependency for a test framework.
+}
+
+run {
+    systemProperty 'net.meng6.gradlehelloworld.name', 'FooBar'
+}
